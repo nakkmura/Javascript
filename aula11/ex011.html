@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1>Em qual país você mora?</h1>
+    <label for="upais">Escreva seu país: </label><input type="text" name="upais" id="upais">
+    <input type="button" value="Enviar" onclick="responder()">
+    <div id="nacionalidade">
+
+    </div>
+    <script>
+        function responder() {
+            var paisValidacao = window.document.querySelector('input#upais').value.toUpperCase()
+
+            var paisBase = window.document.querySelector('input#upais').value.toLowerCase();
+
+            var pais = paisValidacao.charAt(0) + paisBase.slice(1)
+
+            var campoResposta = window.document.querySelector('div#nacionalidade');
+
+            campoResposta.innerHTML = `<p>Seu país é: <strong>${pais}</strong></p>`;
+            
+            if (paisValidacao == 'BRASIL') {
+                campoResposta.innerHTML += `<p>E sua nacionalidade é: <strong>brasileiro</strong></p>`
+            } else {
+                campoResposta.innerHTML += `<p>E sua nacionalidade é: <strong>estrangeiro</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
