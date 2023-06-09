@@ -19,8 +19,8 @@ section {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.300);
 }
 
-div {
-    margin: 5px 0;
+select#flista {
+    width: 150px;
 }
 
 footer {

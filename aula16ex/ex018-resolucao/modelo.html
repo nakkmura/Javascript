@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Contador</title>
+    <title>Analisador de Números</title>
     <link rel="stylesheet" href="styles/estilo.css">
 </head>
 <body>
     <header>
-        <h1>Vamos contar</h1>
+        <h1>Analisador de Números</h1>
     </header>
     <section>
-        <div id="dados">
-            <p>Início: <input type="number" name="inicio" id="txti"></p>
-            <p>Fim: <input type="number" name="fim" id="txtf"></p>
-            <p>Passo: <input type="number" name="passo" id="txtp"></p>
-            <p><input type="button" value="Contar" onclick="contar()"></p>
+        <div>
+            Número (entre 1 e 100): 
+            <input type="number" name="fnum" id="fnum">
+            <input type="button" value="Adicionar" onclick="adicionar()">
+            <br><select name="flista" id="flista" size="6"></select>
+            <br><input type="button" value="Finalizar">
         </div>
         <div id="res">
-            Preparando a contagem...
+            
         </div>
     </section>
     <footer>
