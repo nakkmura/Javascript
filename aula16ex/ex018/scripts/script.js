@@ -1,11 +1,15 @@
+let numField = document.querySelector('input#numfield');
+let numList = document.getElementById('numlist');
+let res = document.querySelector('div#result');
 let numInternalList = [];
 
 function adicionar() {
-    let numField = document.querySelector('input#numfield');
     let num = Number(numField.value);
-    let numList = document.getElementById('numlist');
 
-    if (numField.length == 0) {
+    numField.value = '';
+    numField.focus();
+
+    if (num.length == 0) {
         window.alert('Campo Vazio!');
     } else if (num < 1 || num > 100) {
         window.alert('Insira um número válido');
@@ -16,7 +20,7 @@ function adicionar() {
         numInternalList.push(num);
         item.text = `Número ${num} adicionado`;
         numList.appendChild(item);
-        numField.value = '';
+        res.innerHTML = '';
     }
 }
 
@@ -24,8 +28,6 @@ function calcular() {
     if (numInternalList.length == 0) {
         window.alert('Adicione valores antes de finalizar!')
     } else {
-        let res = document.querySelector('div#result');
-
         res.innerHTML = `Ao todo, temos ${contarTodos(numInternalList)} números.<br>`;
         res.innerHTML += `O maior valor informado foi ${procMaior(numInternalList)}.<br>`;
         res.innerHTML += `O menor valor informado foi ${procMenor(numInternalList)}.<br>`;

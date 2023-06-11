@@ -20,6 +20,7 @@ section {
 }
 
 select#flista {
+    margin-top: 15px;
     width: 150px;
 }
 
